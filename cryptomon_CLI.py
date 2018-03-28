@@ -151,7 +151,7 @@ def Display_Header_Portfolio(l_max_length):
         i += 1
 
     print ("\r")
-    print ("=" * (len(l_categories)*16)) # Utiliser qu'une fonction pour display le header.
+    print ("=" * (len(l_categories)*16)) # Utiliser qu'une fonction pour display les headers.
 
 def Display_Portfolio_Board(l_l_proper_values_coins):
 
