@@ -3,5 +3,13 @@ A python3 tool to quickly monitor coinmarketcap and your portfolio into a termin
 
 # Usage
 You only have to have python3 on your computer and run the script.  
-This script use pre-installed python3 libraries only.
+This script use pre-installed python3 libraries only.  
+  
+cryptomon_CLI.py [-h] [-n NUMBER] [-f [FILE]]  
 
+optional arguments:  
+  -h, --help            show this help message and exit  
+  -n NUMBER, --number NUMBER  
+                        Number of currencies to display in the main board  
+  -f [FILE], --file [FILE]  
+                        Your portfolio file, formatted like the portfolio file example.
