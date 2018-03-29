@@ -13,4 +13,7 @@ optional arguments:
                         Number of currencies to display in the main board  
   -f [FILE], --file [FILE]  
                         Your portfolio file, formatted like the portfolio file example.  
-                        It has to be the full name of the coin not his symbol.
+                        It has to be the full name of the coin not his symbol.  
+                        
+# View
+![alt text](https://github.com/TheAsouka/cryptomon_CLI/blob/master/render.png)
