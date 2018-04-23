@@ -2,10 +2,12 @@
 A python3 tool to quickly monitor coinmarketcap and your crypto portfolio into a terminal.
 
 # Usage
-You only have to have python3 on your computer and run the script.  
-This script use pre-installed python3 libraries only.  
+You need to have python 3.6 or higher on your computer and run the script.  
+This script use pre-installed python3 libraries only.
   
-cryptomon_CLI.py [-h] [-n NUMBER] [-f [FILE]]  
+cryptomon_CLI.py [-h] [-n NUMBER] [-f [FILE]]
+Please specify the full path when your run this script.
+E.g : python3 /Users/username/cryptomon_CLI.py -f /Users/username/portfolio
 
 optional arguments:  
   -h, --help            show this help message and exit  
