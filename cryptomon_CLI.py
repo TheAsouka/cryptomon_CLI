@@ -381,7 +381,7 @@ def Write_Logs(d_portfolio_summary,s_currentime):
     """Write logs to a txt file of your portfolio summary"""
 
     #Create a log file in the same directory as the script
-    file_log = open(str(os.path.dirname(sys.argv[0])) + "/portfologII.txt", "a+")
+    file_log = open(str(os.path.dirname(sys.argv[0])) + "/portfolog.txt", "a+")
     file_log.write(s_currentime + " : " + str(d_portfolio_summary) + "\n")
     file_log.close()
 
