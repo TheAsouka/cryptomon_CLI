@@ -15,7 +15,7 @@ optional arguments:
                         Number of currencies to display in the main board  
   -f [FILE], --file [FILE]  
                         Your portfolio file, formatted like the portfolio file example.  
-                        It has to be the full name of the coin not his symbol. 
+                        It has to be the full name of the coin not his symbol.   
                         The name can be in lower case and if it contains a space, replace the space by a dash (-).  
                         
 # View
