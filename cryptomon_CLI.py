@@ -185,7 +185,11 @@ def Element_Modifier(s_element,i_list_index):
 
 def Get_Portfolio_Values(o_portfolio_file,i_coin_number,l_market_values,l_max_length):
     """Get coins and their values in portfolio file"""
-
+    
+    re_exclude = re.compile("\#")
+    #You can exclude a currency in your portfolio by adding a # before the name
+    #(e.g : "#Ripple":100)
+    
     i = 0
     i_rank = 0
     l_l_values_coins_portfolio = []
@@ -200,6 +204,10 @@ def Get_Portfolio_Values(o_portfolio_file,i_coin_number,l_market_values,l_max_le
         sys.exit(0)
 
     for s_currency, f_quantity in d_portfolio_values.items():
+        
+        if re.match(re_exclude,s_currency):
+            break
+            
         f_quantity = float(f_quantity) #Some values are integers
 
         while i != i_coin_number:
