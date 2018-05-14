@@ -206,7 +206,7 @@ def Get_Portfolio_Values(o_portfolio_file,i_coin_number,l_market_values,l_max_le
     for s_currency, f_quantity in d_portfolio_values.items():
         
         if re.match(re_exclude,s_currency):
-            break
+            continue
             
         f_quantity = float(f_quantity) #Some values are integers
 
