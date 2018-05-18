@@ -334,7 +334,7 @@ def Random_Sentence():
                     "Read whitepapers",
                     "We <3 Blockchain",
                     "Amazing script !",
-                    "Send me some plz",
+                    "Send me some.",
                     "Satoshi Nakamoto",
                     "Vitalik Buterin",
                     "Hal Finney",
