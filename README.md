@@ -13,6 +13,7 @@ optional arguments:
   -h, --help            show this help message and exit  
   -n NUMBER, --number NUMBER  
                         Number of currencies to display in the main board  
+                        
   -f [FILE], --file [FILE]  
                         Your portfolio file, formatted like the portfolio file example.  
                         It has to be the full name of the coin not his symbol.  
