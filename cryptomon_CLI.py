@@ -15,6 +15,7 @@ def Argument_Parser():
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument("-n","--number",help="Number of currencies to display in the main board",type=int,nargs=1)
     arg_parser.add_argument("-f","--file",help="Your portfolio file, formatted like this : {\"EUR Invested\":XXX,\"CoinName\":XXX, ..., \"Bitcoin\":18}",type=argparse.FileType('r'),nargs='?')
+    arg_parser.add_argument("-c","--coiname",help="Name of the specific coin you want to display. e.g : zcash , bitcoin-cash")    
     args = arg_parser.parse_args()
 
     return args
@@ -394,21 +395,27 @@ def Write_Logs(d_portfolio_summary,s_currentime):
     file_log.close()
 
 def main(args):
-    ### Main board ###
+   
+    ### Display specific coin ###
+    l_max_length = [7, 21, 11, 13, 13, 13, 15, 21, 21, 21] #Max length for each desired values
+    s_currentime = Display_Time()
+    Display_Header(l_max_length)
 
+    if args.coiname :
+        s_coiname = (str(args.coiname)).lower()
+        l_specific_values = Get_JSON("https://api.coinmarketcap.com/v1/ticker/"+s_coiname+"/?convert=EUR")
+        Display_Main_Board(1,l_specific_values,l_max_length)
+        
+    ### Main board ###
     if args.number and args.number[0] > 0 :
         s_coin_number = str(args.number[0])
     else :
         s_coin_number = "15"
 
     l_market_values = Get_JSON("https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=" + s_coin_number)
-    l_max_length = [7, 21, 11, 13, 13, 13, 15, 21, 21, 21] #Max length for each desired values
-
-    s_currentime = Display_Time()
-    Display_Header(l_max_length)
     Display_Main_Board(s_coin_number,l_market_values,l_max_length)
 
-
+    
     ### Portfolio board ###
     if args.file :
 
