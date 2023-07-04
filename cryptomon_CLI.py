@@ -1,9 +1,7 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @uthor : TheAsouka
-# BTC address : 16Jg3VFJsWVkip2c5yCHo2bEBustkxQZpW
-# ETH address : 0x3FF703Af55f5Ee0870f44A51d08f753A1f192Fcd
-# Feel free to be generous
+
 
 import re, sys, os, json, argparse, time
 from urllib.request import urlopen
